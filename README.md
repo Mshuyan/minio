@@ -16,8 +16,8 @@
                     "s3:*"
                 ],
                 "Resource": [
-                	# lcdp-sit 是bucket名称
-                    "arn:aws:s3:::lcdp-sit"
+                	# lcdp-sit 是bucket名称,前面得*表示可以有前缀，用以支持bladex得多租户策略，后面得/*必须加，fou'ze
+                    "arn:aws:s3:::*lcdp-sit/*"
                 ]
             }
         ]
@@ -38,3 +38,4 @@
   ![image-20220602113717984](README.assets/image-20220602113717984.png)
 
   
+
